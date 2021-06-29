@@ -54,3 +54,31 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 1300px) {
+  .banners {
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 0.3em; */
+    grid-template-areas:
+      "banner1 banner1"
+      "banner2 banner3"
+      "banner4 banner5";
+  }
+
+  .banners div:first-of-type {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 700px) {
+  .banners {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "banner1"
+      "banner2"
+      "banner3"
+      "banner4"
+      "banner5";
+  }
+}
