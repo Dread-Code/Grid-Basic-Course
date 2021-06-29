@@ -1,0 +1,37 @@
+/* Examplo with mobile first */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: grid;
+  grid-gap: 0.6em;
+  margin: 20px 0;
+}
+
+section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.auto-fill div {
+  background-color: teal;
+  color: white;
+}
+
+.auto-fit div {
+  background-color: burlywood;
+  color: black;
+}
+/* Autogenera bloques */
+.auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+/* REllena el restante con losbloque existentes */
+.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
