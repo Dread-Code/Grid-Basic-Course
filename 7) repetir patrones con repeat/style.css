@@ -1,0 +1,33 @@
+/* Examplo with mobile first */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  grid-gap: 0.6em;
+  grid-template-columns:
+    [start]
+    repeat(
+      4,
+      [col-lg-start] minmax(100px, 1fr) [col-lg-end col-md-start]
+        minmax(50px, 1fr) [col-md-end col-sm-start] minmax(20px, 1fr)
+        [col-sm-end]
+    )
+    [end];
+}
+
+div {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div:first-of-type {
+  background-color: cyan;
+  grid-column: start/ end;
+}
