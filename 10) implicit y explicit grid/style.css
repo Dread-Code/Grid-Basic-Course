@@ -1,0 +1,24 @@
+main {
+  display: grid;
+  height: 100vh;
+  grid-gap: 0.6em;
+
+  grid-template-columns: 12.5em 6.25em;
+  grid-auto-flow: column;
+  /* con el grid-auto controlamos los elementos
+  implicitos, es auto porque los genera automaticamente 
+  el navegador */
+  grid-auto-columns: 600px;
+}
+
+div {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* explicit grid: */
+div:first-of-type,
+div:nth-child(2) {
+  background-color: slateblue;
+}
