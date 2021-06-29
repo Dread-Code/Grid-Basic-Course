@@ -1,5 +1,15 @@
 .banners {
   display: grid;
+
+  grid-template-areas:
+    "banner1 banner1 banner1 banner1"
+    "banner2 banner3 banner4 banner5";
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.banners {
+  height: 100vh;
 }
 
 .banners div:first-of-type {
