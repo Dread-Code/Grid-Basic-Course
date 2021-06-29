@@ -1,0 +1,25 @@
+main {
+  display: grid;
+  height: 100vh;
+  grid-gap: 2em;
+  grid-template: repeat(4, 3.12em) / repeat(3, 1fr);
+  /* Justify items posiciona los el item a lo largo 
+  de cada grid cell  horizontalmente*/
+  justify-items: center;
+
+  /* Justify items posiciona los el item a lo largo 
+  de cada grid cell  verticalemente*/
+  align-items: end;
+}
+
+main > * {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2em; */
+}
+
+.hola {
+  background-color: pink;
+}
