@@ -1,0 +1,49 @@
+main {
+  display: grid;
+  height: 100vh;
+  grid-gap: 2em;
+  grid-template: repeat(4, 3.12em) / repeat(3, 1fr);
+}
+
+main > * {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2em; */
+}
+
+.hola {
+  background-color: pink;
+}
+
+/* TAnto align-self y justify-self nos sirbve para
+alinear un solo item seleccionado en su respectiva 
+horienzacion:
+  align-self: vertical
+  justify-self: horizontal
+*/
+
+.div5 {
+  background-color: skyblue;
+  justify-self: center;
+  align-self: end;
+}
+
+main > div:nth-child(1) {
+  background-color: slateblue;
+  justify-self: end;
+  align-self: stretch;
+}
+
+main > div:nth-child(3) {
+  background-color: tomato;
+  justify-self: start;
+  align-self: stretch;
+}
+
+main > div:nth-child(2) {
+  background-color: turquoise;
+  justify-self: center;
+  align-self: center;
+}
