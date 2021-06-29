@@ -1,0 +1,46 @@
+/* Examplo with mobile first */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  grid-gap: 0.6em;
+  grid-template-columns:
+    /* repeat(8, 1fr) */
+    /* 1fr 1fr 1fr 1f 1fr 1fr 1fr 1fr */
+
+
+    /*Recuerda que el minmax suma la cantidad 
+    minima que se le apse en el primer parametro 
+    20px * 8 = 160 */
+     /* repeat(8,minmax(20px, 1fr)) */
+    
+    /* Intercalacion de columna grande y pequeña */
+    /* el primer parametro es  un cuatro porque ya 
+    no estamos multiplicando un elemento si no 2 */ 
+    /* repeat(
+    4,
+    30px minmax(10%, 1fr)
+    ) */
+
+    /* que no sea mas grande que el contenido que 
+    tenga dentro */
+   /* repeat(
+    8,
+    minmax(min-content, 30%)
+    ) */ repeat(
+    8,
+    minmax(min-content, max-content)
+  );
+}
+
+main > * {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
