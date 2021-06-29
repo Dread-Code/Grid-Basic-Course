@@ -5,8 +5,11 @@
 
 main {
   display: grid;
-  height: 100%;
+  height: 100vh;
   grid-gap: 0.6em;
+  /* Fraccion aprovecha el espacio disponible en la pantalla */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 main > * {
@@ -14,4 +17,18 @@ main > * {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* Configuracion para pantallas hasta 991.98px usualmente tablets para abajo */
+@media (max-width: 991.98px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+/* movil */
+@media (max-width: 575.98px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+  }
 }
